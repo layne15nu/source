@@ -11,7 +11,9 @@ define([
         if (typeof selector === "string") {
             console.log(selector);
         } else if (selector.nodeType) {
-            console.log(selector);
+            this[0] = selector;
+            this.length = 1;
+            return this;
         } else if (isFunction(selector)) {
             return root.ready !== undefined ? root.ready(selector) : selector(jQuery);
         }

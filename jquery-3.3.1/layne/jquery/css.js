@@ -5,7 +5,8 @@ define([
 ], function (jQuery) {
     "use strict";
     jQuery.fn.extend({
-        css: function () {
+        css: function (elem, name, extra, styles) {
+            console.log(arguments);
         }
     });
     return jQuery;
