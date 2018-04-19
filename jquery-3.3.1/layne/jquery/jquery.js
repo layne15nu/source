@@ -1,7 +1,11 @@
 define( [
     "./core",
+    "./core/ready",
     "./css"
-], function (jQuery) {
+], function( jQuery ) {
+
     "use strict";
+
     return jQuery;
-});
+
+} );

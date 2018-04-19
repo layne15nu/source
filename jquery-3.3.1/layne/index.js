@@ -1,7 +1,7 @@
 define("main", [
     "../src/jquery",
     "./jquery/jquery"
-], function ($, jQuery) {
+], function (jQuery, $) {
 
     // $("body").css("background-color", "red");
 
@@ -12,10 +12,10 @@ define("main", [
         - jQuery(elements)
         - jQuery(callback)
      */
-    jQuery("body").css("background-color", "red");
-    jQuery("<div><h1>Hello</h1></div>");
-    jQuery("document");
-    jQuery(function () {
+    $("body").css("background-color", "red");
+    $("<div><h1>Hello</h1></div>");
+    $(document);
+    $(function () {
         console.log("this is ready");
     });
 
