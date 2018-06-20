@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Table</title>
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-controller="mainCtrl">
+<table st-table="rowCollection" class="table table-striped">
+  <thead>
+  <tr>
+    <th st-sort="name">姓名</th>
+    <th st-sort="age">年龄</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="row in rowCollection">
+    <td>{{row.name}}</td>
+    <td>{{row.age}}</td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="5" class="text-center">
+      <div st-pagination=""></div>
+    </td>
+  </tr>
+  </tfoot>
+</table>
+<script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+<script src="smart-table.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
